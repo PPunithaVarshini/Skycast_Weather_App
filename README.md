@@ -1,38 +1,100 @@
-# SkyCast — Intermediate Weather App
+# 🌦️ SkyCast — Weather App
 
-Responsive weather app built with HTML, CSS, and vanilla JavaScript.
+A simple and user-friendly weather application that helps users check weather conditions for their chosen location through a clean and intuitive interface.
 
-## Features
-- Search cities worldwide using geocoding
-- Current temperature, feels-like temperature, humidity, wind speed and daily range
-- Six-hour preview and five-day forecast
-- Celsius/Fahrenheit conversion
-- Optional browser geolocation
-- Recent searches stored with localStorage
-- Loading, error and empty states
-- Responsive mobile layout
+## 📌 About the Project
 
-## Run it
-1. Extract the ZIP and open the folder in VS Code.
-2. Install the **Live Server** extension (recommended).
-3. Right-click `index.html` → **Open with Live Server**.
-4. Search for `Madurai` or `London`.
+**SkyCast Weather App** is a hands-on project built to practise application development, working with weather data, and designing a user-friendly interface.
 
-The app uses Open-Meteo APIs, which do not require an API key for this learning project:
-- https://geocoding-api.open-meteo.com/v1/search
-- https://api.open-meteo.com/v1/forecast
+The goal of SkyCast is to make weather information easy to access by presenting relevant weather details in a clear and organized format.
 
-Credit: https://open-meteo.com/
+## ✨ Features
 
-## Explain these concepts
-HTML forms, CSS Flexbox/Grid and media queries, JavaScript events and DOM manipulation, arrays and objects, fetch, async/await, JSON, error handling, localStorage, geolocation permissions, public APIs.
+- 🌍 **City-Based Search** — Search for weather information by location.
+- 🌡️ **Weather Information** — Display available temperature and weather conditions.
+- 💨 **Weather Details** — Show additional information such as humidity and wind speed, if supported.
+- 🎨 **User-Friendly Interface** — A clean layout designed for easy navigation.
+- ⚡ **Real-Time Data** — Retrieve current weather information through a weather API, if configured.
+- 📱 **Responsive Design** — Adapt the layout to different screen sizes, if supported.
 
-## Test before adding to your resume
-- Search Madurai and London.
-- Search a nonsense city and confirm the error message.
-- Toggle Celsius/Fahrenheit.
-- Refresh and check recent searches persist.
-- Test in a narrow browser window.
-- Try location only if you are comfortable granting browser permission.
+## 🛠️ Technologies Used
 
-This is a learning project, not an emergency warning service. Forecast data may differ from local observations.
+Update this list to match the technologies in your project.
+
+- HTML
+- CSS
+- JavaScript
+- Weather API (if integrated)
+- Git and GitHub
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A modern web browser
+- A code editor such as Visual Studio Code
+- Internet access if the application retrieves live weather data
+
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone YOUR_GITHUB_REPOSITORY_URL
+   ```
+
+2. Open the project folder in Visual Studio Code.
+
+3. Open `index.html` in your browser or run the project using the Live Server extension.
+
+4. If your application uses a weather API, ensure the API configuration is set up correctly.
+
+## 📁 Project Structure
+
+```text
+SkyCast-Weather-App/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+*Adjust the filenames above if your actual project uses a different structure.*
+
+## 💻 How to Use
+
+1. Launch the application in your browser.
+2. Enter the city or location you want to check.
+3. Submit the search.
+4. View the weather information displayed by the application.
+
+## 🎯 Learning Outcomes
+
+Building SkyCast helped me practise:
+
+- Creating a user interface with HTML and CSS
+- Implementing user interactions with JavaScript
+- Working with user input and displaying results
+- Understanding API integration, if used in the project
+- Organizing project files and using GitHub for version control
+
+## 🔮 Future Improvements
+
+- Add a multi-day weather forecast
+- Display weather icons and animations
+- Add location-based weather detection
+- Improve error handling for invalid city names
+- Add temperature unit conversion between Celsius and Fahrenheit
+- Enhance accessibility and mobile responsiveness
+
+## 👩‍💻 Author
+
+**PunithaVarshini P**
+
+B.Tech Information Technology Student
+
+This project is part of my hands-on learning journey in software development.
+
+---
+
+⭐ If you find this project interesting, feel free to explore the code and share suggestions for improvement.
