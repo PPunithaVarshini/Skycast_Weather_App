@@ -1,0 +1,480 @@
+/* ==========================================================================
+   1. VARIABLES & TYPOGRAPHY SETTINGS
+   ========================================================================== */
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://gstatic.com) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://gstatic.com) format('truetype');
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #182b49;
+  background-color: #f5f7fc;
+  
+  /* Semantic Color System */
+  --blue: #365fe5;
+  --muted: #71809a;
+  --line: #e6ebf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. LAYOUT WRAPPERS & CONTAINER
+   ========================================================================== */
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 90% 0%, #e4ecff, transparent 34rem), #f5f7fc;
+}
+
+.app {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. HEADER & HERO INTRO
+   ========================================================================== */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.brand {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #182b49;
+  text-decoration: none;
+  letter-spacing: -.05em;
+}
+
+.intro {
+  text-align: center;
+  padding: 30px 0 22px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--blue);
+  margin: 0 0 7px;
+}
+
+h1 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -.06em;
+  margin: 0 0 8px;
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -.03em;
+  margin: 0 0 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   4. SEARCH FORM COMPONENT
+   ========================================================================== */
+
+.search {
+  display: flex;
+  gap: 8px;
+  width: min(100%, 600px);
+  margin: 0 auto;
+  padding: 7px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 12px;
+  outline: 0;
+  font: inherit;
+}
+
+.search button {
+  border: 0;
+  border-radius: 10px;
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  padding: 0 19px;
+  cursor: pointer;
+}
+
+.status {
+  text-align: center;
+  color: var(--muted);
+  min-height: 24px;
+  font-size: 0.9rem;
+  margin: 14px 0;
+}
+
+.status.error {
+  color: #b42318;
+}
+
+/* ==========================================================================
+   5. WEATHER CARDS & SECTIONS
+   ========================================================================== */
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px;
+  margin: 20px 0;
+  box-shadow: 0 8px 28px #263e6808;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 15px;
+}
+
+.section-head .eyebrow {
+  margin-bottom: 5px;
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+/* Current Conditions Card */
+.current {
+  background: linear-gradient(125deg, #3768ec, #5b83f2 65%, #81a5ff);
+  color: white;
+  padding: clamp(20px, 4vw, 32px);
+}
+
+.current-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.small {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #e0e8ff;
+}
+
+.current h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  margin: 8px 0;
+}
+
+.current p {
+  margin-bottom: 8px;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.temp span {
+  font-size: 3rem;
+}
+
+.temp strong {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  letter-spacing: -.07em;
+  white-space: nowrap;
+}
+
+.current hr {
+  border: 0;
+  border-top: 1px solid #ffffff55;
+  margin: 20px 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.stats div {
+  display: grid;
+  gap: 8px;
+}
+
+.stats span {
+  font-size: 0.85rem;
+  color: #e0e8ff;
+}
+
+.stats strong {
+  font-size: 1rem;
+}
+
+/* Hourly Block */
+.hourly {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.hour {
+  padding: 12px 4px;
+  text-align: center;
+  background: #f8faff;
+  border: 1px solid #edf0f7;
+  border-radius: 14px;
+}
+
+.hour span, 
+.hour strong {
+  display: block;
+}
+
+.hour .time {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.hour .weather-icon {
+  font-size: 1.4rem;
+  margin: 9px 0;
+}
+
+/* Daily Block */
+.daily .day {
+  display: grid;
+  grid-template-columns: 1fr 35px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f7;
+}
+
+.daily .day:last-child {
+  border: 0;
+}
+
+.day-icon {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.day-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.temps {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.low {
+  color: #8a97ad;
+  font-weight: 500;
+}
+
+/* Recent Searches History */
+.recent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #f8faff;
+  border: 1px solid #dfe6f2;
+  border-radius: 999px;
+  padding: 9px 12px;
+  cursor: pointer;
+  color: #182b49;
+}
+
+/* ==========================================================================
+   6. INTERACTIVE UTILITIES & FOOTER
+   ========================================================================== */
+
+.pill {
+  border: 1px solid #dfe6f2;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 13px;
+  color: #365fe5;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.plain {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 12px 0 28px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--blue);
+}
+
+/* Accessibility Helpers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Focus States for Keyboard Navigation */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9cb4ff;
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN BREAKPOINTS (MOBILE FIRST ADAPTATIONS)
+   ========================================================================== */
+
+@media (max-width: 620px) {
+  .topbar {
+    align-items: flex-start;
+  }
+  
+  .topbar > div {
+    display: grid;
+    gap: 6px;
+  }
+  
+  .intro {
+    padding-top: 18px;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .hourly {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .daily .day {
+    grid-template-columns: 1fr 30px auto;
+  }
+  
+  .day-desc {
+    display: none;
+  }
+  
+  .card {
+    padding: 17px;
+  }
+  
+  .current-row {
+    align-items: flex-start;
+  }
+  
+  .temp {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .temp span {
+    font-size: 2.2rem;
+  }
+  
+  .temp strong {
+    font-size: 2.8rem;
+  }
+}
